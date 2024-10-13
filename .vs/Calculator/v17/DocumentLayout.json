@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ELViN\\source\\repos\\Calculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\calculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\calculator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|c:\\users\\elvin\\source\\repos\\calculator\\calculator\\models\\calculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16AC9F96-A2A9-4406-ABDC-922C7ECA8E25}|Calculator\\Calculator.csproj|solutionrelative:calculator\\models\\calculatormodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Calculator\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Calculator\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T18:29:47.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Calculator\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Calculator\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAIwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T18:26:56.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Calculator",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
+              "RelativeDocumentMoniker": "Calculator\\Calculator.csproj",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Calculator.csproj",
+              "RelativeToolTip": "Calculator\\Calculator.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-13T17:35:57.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\Calculator\\Index.cshtml",
+              "RelativeDocumentMoniker": "Calculator\\Views\\Calculator\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Views\\Calculator\\Index.cshtml",
+              "RelativeToolTip": "Calculator\\Views\\Calculator\\Index.cshtml",
+              "ViewState": "AQIAAEkBAAAAAAAAAAAUwHMBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T17:16:41.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "Calculator\\Controllers\\CalculatorController.cs",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Controllers\\CalculatorController.cs",
+              "RelativeToolTip": "Calculator\\Controllers\\CalculatorController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T17:16:09.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CalculatorModel.cs",
+              "DocumentMoniker": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Models\\CalculatorModel.cs",
+              "RelativeDocumentMoniker": "Calculator\\Models\\CalculatorModel.cs",
+              "ToolTip": "C:\\Users\\ELViN\\source\\repos\\Calculator\\Calculator\\Models\\CalculatorModel.cs",
+              "RelativeToolTip": "Calculator\\Models\\CalculatorModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T17:11:31.846Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

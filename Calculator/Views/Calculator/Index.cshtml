@@ -1,0 +1,375 @@
+﻿@* @model Calculator.Models.CalculatorModel
+
+@{
+    Layout = "_Layout"; // Layout dosyasının adı
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Hesap Makinesi</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 90vw;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .display {
+            background-color: #222;
+            color: white;
+            text-align: right;
+            font-size: 48px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 80px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .button {
+            width: 80px;
+            height: 80px;
+            font-size: 32px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .button:hover {
+                background-color: #d4d4d4;
+            }
+
+        .operator {
+            background-color: #5cb85c;
+            color: white;
+        }
+
+            .operator:hover {
+                background-color: #4cae4c;
+            }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">
+            @(string.IsNullOrEmpty(Model.Expression) ? "0" : Model.Expression)
+        </div>
+
+        <form asp-action="Calculate" method="post">
+            <input type="hidden" asp-for="Expression" id="expressionInput" />
+
+            <!-- Buton dizilimi -->
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('7')">7</button>
+                <button type="button" class="button" onclick="appendToDisplay('8')">8</button>
+                <button type="button" class="button" onclick="appendToDisplay('9')">9</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('4')">4</button>
+                <button type="button" class="button" onclick="appendToDisplay('5')">5</button>
+                <button type="button" class="button" onclick="appendToDisplay('6')">6</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('1')">1</button>
+                <button type="button" class="button" onclick="appendToDisplay('2')">2</button>
+                <button type="button" class="button" onclick="appendToDisplay('3')">3</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('0')">0</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('+')">+</button>
+                <button type="button" class="button" onclick="calculateResult()">=</button>
+                <button type="button" class="button" onclick="clearDisplay()">C</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('Math.log(')">log</button>
+                <button type="button" class="button" onclick="deleteLastCharacter()">←</button>
+            </div>
+        </form>
+
+        @if (Model.Result != 0)
+        {
+            <div class="result">Sonuç: @Model.Result</div>
+        }
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error">@ViewData.ModelState[""].Errors[0].ErrorMessage</div>
+        }
+    </div>
+
+    <script>
+        function appendToDisplay(value) {
+            const display = document.getElementById('display');
+            const expressionInput = document.getElementById('expressionInput');
+            display.textContent = (display.textContent === "0" ? "" : display.textContent) + value;
+            expressionInput.value = display.textContent;
+        }
+
+        function calculateResult() {
+            const display = document.getElementById('display');
+            let expression = display.textContent.replace(/Math.log\(/g, "Math.log10("); // Logaritma fonksiyonu
+            document.getElementById('expressionInput').value = expression;
+            document.forms[0].submit();
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').textContent = "0";
+            document.getElementById('expressionInput').value = "";
+        }
+
+        function deleteLastCharacter() {
+            const display = document.getElementById('display');
+            let currentText = display.textContent;
+            if (currentText.length > 1) {
+                display.textContent = currentText.slice(0, -1);
+            } else {
+                display.textContent = "0";
+            }
+            document.getElementById('expressionInput').value = display.textContent;
+        }
+    </script>
+</body>
+</html>
+ *@
+
+
+
+
+
+
+@model Calculator.Models.CalculatorModel
+
+@{
+    Layout = "_Layout"; // Layout dosyasının adı
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gelişmiş Hesap Makinesi</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .calculator {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 90vw;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .display {
+            background-color: #222;
+            color: white;
+            text-align: right;
+            font-size: 48px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 80px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .button {
+            width: 80px;
+            height: 80px;
+            font-size: 32px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+            .button:hover {
+                background-color: #d4d4d4;
+            }
+
+        .operator {
+            background-color: #5cb85c;
+            color: white;
+        }
+
+            .operator:hover {
+                background-color: #4cae4c;
+            }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+        }
+
+        .result {
+            font-size: 28px;
+            color: green;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">
+            @(string.IsNullOrEmpty(Model.Expression) ? "0" : Model.Expression)
+        </div>
+
+        <form asp-action="Calculate" method="post">
+            <input type="hidden" asp-for="Expression" id="expressionInput" />
+
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('7')">7</button>
+                <button type="button" class="button" onclick="appendToDisplay('8')">8</button>
+                <button type="button" class="button" onclick="appendToDisplay('9')">9</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('/')">/</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('4')">4</button>
+                <button type="button" class="button" onclick="appendToDisplay('5')">5</button>
+                <button type="button" class="button" onclick="appendToDisplay('6')">6</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('1')">1</button>
+                <button type="button" class="button" onclick="appendToDisplay('2')">2</button>
+                <button type="button" class="button" onclick="appendToDisplay('3')">3</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('-')">-</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('0')">0</button>
+                <button type="button" class="button operator" onclick="appendToDisplay('+')">+</button>
+                <button type="button" class="button" onclick="calculateResult()">=</button>
+                <button type="button" class="button" onclick="clearDisplay()">C</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('Math.sqrt(')">√</button>
+                <button type="button" class="button" onclick="appendToDisplay('Math.sin(')">sin</button>
+                <button type="button" class="button" onclick="appendToDisplay('Math.cos(')">cos</button>
+                <button type="button" class="button" onclick="appendToDisplay('Math.tan(')">tan</button>
+            </div>
+            <div class="button-row">
+                <button type="button" class="button" onclick="appendToDisplay('Math.log(')">log</button>
+                <button type="button" class="button" onclick="deleteLastCharacter()">←</button>
+            </div>
+        </form>
+
+        @if (Model.Result != 0)
+        {
+            <div class="result">Sonuç: @Model.Result</div>
+        }
+
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="error">@ViewData.ModelState[""].Errors[0].ErrorMessage</div>
+        }
+    </div>
+
+    <script>
+        let displayCleared = false; // Ekranın temizlenip temizlenmediğini takip et
+
+        function appendToDisplay(value) {
+            const display = document.getElementById('display');
+            const expressionInput = document.getElementById('expressionInput');
+
+            // Ekranı temizlemişsek yeni bir sayı yaz
+            if (displayCleared) {
+                display.textContent = value;
+                displayCleared = false;
+            } else {
+                if (display.textContent === "0") {
+                    display.textContent = value; // "0" ise yeni rakamı göster
+                } else {
+                    display.textContent += value; // Aksi takdirde ekle
+                }
+            }
+
+            expressionInput.value = display.textContent; // Gizli inputu güncelle
+        }
+
+        function calculateResult() {
+            const display = document.getElementById('display');
+            let expression = display.textContent;
+
+            // Gerekli dönüşümleri yap
+            expression = expression.replace(/Math.sqrt\(/g, "Math.sqrt("); // Karekök
+            expression = expression.replace(/Math.sin\(/g, "Math.sin("); // Sinüs
+            expression = expression.replace(/Math.cos\(/g, "Math.cos("); // Kosinüs
+            expression = expression.replace(/Math.tan\(/g, "Math.tan("); // Tanjant
+            expression = expression.replace(/Math.log\(/g, "Math.log10("); // Logaritma
+
+            document.getElementById('expressionInput').value = expression;
+            document.forms[0].submit();
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').textContent = "0";
+            document.getElementById('expressionInput').value = "";
+            displayCleared = true; // Ekranın temizlendiğini belirt
+        }
+
+        function deleteLastCharacter() {
+            const display = document.getElementById('display');
+            let currentText = display.textContent;
+
+            if (currentText.length > 1) {
+                display.textContent = currentText.slice(0, -1);
+            } else {
+                display.textContent = "0"; // Tek karakter kaldığında sıfır yap
+            }
+            document.getElementById('expressionInput').value = display.textContent;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
